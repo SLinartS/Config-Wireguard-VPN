@@ -65,18 +65,18 @@ PostUp   = iptables -A FORWARD -i wg0 -j ACCEPT; iptables -A FORWARD -o wg0 -j A
 PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j ACCEPT; iptables -t nat -D POSTROUTING -o <DEFAULT_ETHERNET_INTERFACE> -j MASQUERADE
 
 [Peer]
-PublicKey = <0_CLIENT_PRIVATE_KEY>
-AllowedIPs = 10.0.0.2/24
+PublicKey = <0_CLIENT_PUBLIC_KEY>
+AllowedIPs = 10.0.0.2/32
 PersistentKeepalive = 25
 
 [Peer]
-PublicKey = <1_CLIENT_PRIVATE_KEY>
-AllowedIPs = 10.0.0.2/24
+PublicKey = <1_CLIENT_PUBLIC_KEY>
+AllowedIPs = 10.0.0.3/32
 PersistentKeepalive = 25
 
 [Peer]
-PublicKey = <3CLIENT_PRIVATE_KEY>
-AllowedIPs = 10.0.0.2/24
+PublicKey = <3CLIENT_PUBLIC_KEY>
+AllowedIPs = 10.0.0.4/32
 PersistentKeepalive = 25
 ```
 
