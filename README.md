@@ -56,7 +56,7 @@ sudo nano /etc/wireguard/wg0.conf
 
 ```ini
 [Interface]
-Address = 10.0.0.1/24
+Address = 10.66.66.1/24
 ListenPort = 51820
 PrivateKey = <SERVER_PRIVATE_KEY>
 
@@ -66,17 +66,17 @@ PostDown = iptables -D FORWARD -i wg0 -j ACCEPT; iptables -D FORWARD -o wg0 -j A
 
 [Peer]
 PublicKey = <0_CLIENT_PUBLIC_KEY>
-AllowedIPs = 10.0.0.2/32
+AllowedIPs = 10.66.66.2/32
 PersistentKeepalive = 25
 
 [Peer]
 PublicKey = <1_CLIENT_PUBLIC_KEY>
-AllowedIPs = 10.0.0.3/32
+AllowedIPs = 10.66.66.3/32
 PersistentKeepalive = 25
 
 [Peer]
 PublicKey = <3CLIENT_PUBLIC_KEY>
-AllowedIPs = 10.0.0.4/32
+AllowedIPs = 10.66.66.4/32
 PersistentKeepalive = 25
 ```
 
@@ -130,7 +130,7 @@ sudo nano /etc/wireguard/wg0.conf
 ```ini
 [Interface]
 PrivateKey = <CLIENT_PRIVATE_KEY>
-Address = 10.0.0.2/32
+Address = 10.66.66.2/32
 ListenPort = 51820 
 
 [Peer]
