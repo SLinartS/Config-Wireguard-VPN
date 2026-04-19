@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# UPDATE THE SYSTEM
+echo "Updating the system..."
+apt update
+
+# INSTALL NECESSARY PACKAGES
+echo "Installing necessary packages..."
+export DEBIAN_FRONTEND=noninteractive
+apt -y install wireguard wireguard-tools qrencode
