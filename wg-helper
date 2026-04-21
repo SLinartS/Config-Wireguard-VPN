@@ -113,7 +113,6 @@ add_client() {
 [Peer]
 PublicKey = ${client_public_key}
 AllowedIPs = ${client_ip}/32
-PersistentKeepalive = ${WG_PERSISTENT_KEEPALIVE}
 EOF
 
   assemble_wg_config
